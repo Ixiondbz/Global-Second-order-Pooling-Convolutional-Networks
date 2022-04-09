@@ -332,7 +332,7 @@ def resnet50(pretrained=False, att_position=[[],[],[],[]], att_dim = 128,**kwarg
     Args:
         pretrained (bool): If True, returns a model pre-trained on ImageNet
     """
-    model = ResNet(Bottleneck, [3, 4, 6, 3], att_position, att_dim, **kwargs)
+    model = ResNet(Bottleneck, [3, 4, 6, 3], att_position, att_dim,1, **kwargs)
     if pretrained:
         model.load_state_dict(model_zoo.load_url(model_urls['resnet50']))
     return model
